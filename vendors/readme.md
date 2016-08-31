@@ -1,2 +1,2 @@
 #Vendors
-Directory for dependencies. 
+Directory for dependencies installed by bower. 
