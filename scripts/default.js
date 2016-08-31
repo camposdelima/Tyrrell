@@ -2,30 +2,15 @@
 require(
 	[
 		'jquery'
-		, 'installers/ContainerInstaller'
-		, 'installers/DispatcherInstaller'
-		, 'installers/RouterInstaller'
+		, 'installers/ApplicationInstaller'
 	]
 	, function (
 		$
-		, ContainerInstaller
-		, DispatcherInstaller
-		, RouterInstaller
+		, ApplicationInstaller
     ) {
 
-		init(ContainerInstaller)
-			.then(continueWith(DispatcherInstaller))
-			.then(continueWith(RouterInstaller));
-
-		function continueWith(ComponentType) {
-			return function (dependency) {
-				return init(ComponentType, dependency);
-			};
-		}
-
-		function init(ComponentType, dependency) {
-			var component = new ComponentType(dependency);
-			return component.init();
-		}
+		var appInstaller = new ApplicationInstaller();
+		appInstaller.init();
+			
     }
 );

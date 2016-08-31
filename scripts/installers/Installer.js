@@ -9,7 +9,12 @@ define(
 
         prototype.init = function init() {
             var deferred = this.getDeferred();
-            deferred.resolve();
+            
+            deferred.fail(function() {
+                throw new Error("Not implemented installer");
+            })
+
+            deferred.reject();
             
             return deferred.promise();
         }
