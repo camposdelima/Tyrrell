@@ -1,1 +1,2 @@
-# Tyrrell - Asynchronous Inheritable Modular SPA Boilerplate 
+# Tyrrell
+Asynchronous Inheritable Modular SPA Boilerplate 
