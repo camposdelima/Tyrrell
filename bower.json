@@ -1,0 +1,27 @@
+{
+  "name": "Tyrrell",
+  "version": "1.0.0.0",
+  "description": "Asynchronous Inheritable Modular SPA Boilerplate.",
+  "main": "scripts/default.js",
+  "authors": [
+    "Cristiano Campos de Lima;https://github.com/camposdelima;"
+  ],
+  "license": "APACHE",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "vendors"
+  ],
+  "dependencies": {
+    "jquery": "",
+    "requirejs": "",
+    "moment": "",
+    "sammy": "",
+    "text": "",
+    "underscore": "",
+    "amd-feature": ""
+  }
+}
