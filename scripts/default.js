@@ -1,16 +1,13 @@
 'use Strict'
 require(
-	[
-		'jquery'
-		, 'installers/ApplicationInstaller'
+	[		
+		'feature!ApplicationInstaller'
 	]
 	, function (
-		$
-		, ApplicationInstaller
-    ) {
+			ApplicationInstaller			
+    ) {		
+			var appInstaller = new ApplicationInstaller();
+			appInstaller.init();
 
-		var appInstaller = new ApplicationInstaller();
-		appInstaller.init();
-			
     }
 );

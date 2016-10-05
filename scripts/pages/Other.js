@@ -1,6 +1,6 @@
 define(
     [
-        'pages/Page'
+        'feature!Page'
         ,'text!views/other.html'
 
     ]
