@@ -1,0 +1,5 @@
+define(
+    {
+        showLogs: true
+    }       
+);

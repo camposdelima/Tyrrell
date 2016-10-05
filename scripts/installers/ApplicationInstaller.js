@@ -1,15 +1,13 @@
 define(
     [
-        'installers/Installer'
-        , 'installers/ContainerInstaller'
-		, 'installers/DispatcherInstaller'
-		, 'installers/RouterInstaller'
+        'feature!BaseApplicationInstaller'
+        ,'installers/DebuggerInstaller'
+        ,'installers/SomethingInstaller'
     ]
     ,function(
         BaseType
-        ,ContainerInstaller
-        ,DispatcherInstaller
-        ,RouterInstaller
+        ,DebuggerInstaller
+        ,SomethingInstaller
         ){
 
         function Constructor() {
@@ -18,28 +16,18 @@ define(
 
         var prototype = new BaseType();
 
-        prototype.init = function init() { 
+        prototype.init = function init() {
+            var defaultInstallationsPromisse = BaseType.prototype.init.call(this);
             var deferred = this.getDeferred();
-            
-            initialize(ContainerInstaller)
-			.then(continueWith(DispatcherInstaller))
-			.then(continueWith(RouterInstaller))
+
+            defaultInstallationsPromisse
+            .then(this.continueWith(DebuggerInstaller))
+			.then(this.continueWith(SomethingInstaller))
             .then(deferred.resolve);
             
             return deferred.promise();
-        };	   
-
-		function continueWith(ComponentType) {
-			return function (dependency) {
-				return initialize(ComponentType, dependency);
-			};
-		}
-
-        function initialize(ComponentType, dependency) {
-			var component = new ComponentType(dependency);
-			return component.init();
-		}
-
+        };        
+        
         Constructor.prototype = prototype;
         return Constructor;
     }
