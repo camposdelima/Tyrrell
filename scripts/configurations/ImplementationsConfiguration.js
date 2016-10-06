@@ -1,7 +1,7 @@
 define(
     [
         'baseImplementations'
-        ,'jQuery'
+        ,'jquery'
     ], function(baseImplementations){        
         return $.extend(baseImplementations,
             {

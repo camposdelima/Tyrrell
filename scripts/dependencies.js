@@ -8,8 +8,7 @@ requirejs.config(
 	    baseUrl: 'scripts',
 	    paths: {
 			'views': '../views'
-			,'jQuery': '../vendors/jquery/dist/jquery.min'
-			// ,'moment': '../vendor/moment/moment'
+			,'jquery': '../vendors/jquery/dist/jquery.min'
 			,'sammy': '../vendors/sammy/lib/sammy'
 			,'text': '../vendors/text/text'
 			,'feature': '../vendors/amd-feature/feature'			
@@ -21,7 +20,7 @@ requirejs.config(
 			,'implementations': 'configurations/ImplementationsConfiguration'
 	    }
 		,shim: {
-			'sammy': ['jQuery']
+			'sammy': ['jquery']
 		}
 		,deps: ['tyrr/default']
 	}

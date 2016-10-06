@@ -1,5 +1,5 @@
 {
-  "name": "Tyrrell",
+  "name": "tyrrell",
   "version": "0.0.1",
   "description": "Asynchronous Inheritable Modular SPA Boilerplate.",
   "main": "scripts/default.js",
@@ -20,7 +20,6 @@
     "jquery": "",
     "requirejs": "",
     "moment": "",
-    "sammy": "",
     "text": "",
     "underscore": "",
     "amd-feature": ""
