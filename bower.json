@@ -1,6 +1,6 @@
 {
   "name": "Tyrrell",
-  "version": "1.0.0.0",
+  "version": "0.0.1",
   "description": "Asynchronous Inheritable Modular SPA Boilerplate.",
   "main": "scripts/default.js",
   "authors": [
@@ -16,6 +16,7 @@
     "vendors"
   ],
   "dependencies": {
+    "tyrr": "",
     "jquery": "",
     "requirejs": "",
     "moment": "",
